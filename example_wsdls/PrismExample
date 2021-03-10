@@ -1,0 +1,1319 @@
+<definitions name="PRISMBaseDataWSv701" targetNamespace="http://v701.PRISMBaseDataWS.basedataws.ws.prism.leidos.com" xmlns:tns="http://v701.PRISMBaseDataWS.basedataws.ws.prism.leidos.com" xmlns:ns1="http://v701.ws.prism.leidos.com" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+   <types>
+      <xs:schema targetNamespace="http://v701.PRISMBaseDataWS.basedataws.ws.prism.leidos.com" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+         <xs:import namespace="http://v701.ws.prism.leidos.com" schemaLocation="xsd/PRISM.xsd"/>
+         <xs:element name="getAOIs" type="tns:getAOIs"/>
+         <xs:element name="getAOIsResponse" type="tns:getAOIsResponse"/>
+         <xs:element name="getAnticipatedGains" type="tns:getAnticipatedGains"/>
+         <xs:element name="getAnticipatedGainsResponse" type="tns:getAnticipatedGainsResponse"/>
+         <xs:element name="getBases" type="tns:getBases"/>
+         <xs:element name="getBasesResponse" type="tns:getBasesResponse"/>
+         <xs:element name="getCMXCATs" type="tns:getCMXCATs"/>
+         <xs:element name="getCMXCATsResponse" type="tns:getCMXCATsResponse"/>
+         <xs:element name="getCRMasintTypes" type="tns:getCRMasintTypes"/>
+         <xs:element name="getCRMasintTypesResponse" type="tns:getCRMasintTypesResponse"/>
+         <xs:element name="getCollectionProbabilities" type="tns:getCollectionProbabilities"/>
+         <xs:element name="getCollectionProbabilitiesResponse" type="tns:getCollectionProbabilitiesResponse"/>
+         <xs:element name="getCountryCodes" type="tns:getCountryCodes"/>
+         <xs:element name="getCountryCodesResponse" type="tns:getCountryCodesResponse"/>
+         <xs:element name="getDGSs" type="tns:getDGSs"/>
+         <xs:element name="getDGSsResponse" type="tns:getDGSsResponse"/>
+         <xs:element name="getGeoRegions" type="tns:getGeoRegions"/>
+         <xs:element name="getGeoRegionsResponse" type="tns:getGeoRegionsResponse"/>
+         <xs:element name="getIDHSs" type="tns:getIDHSs"/>
+         <xs:element name="getIDHSsResponse" type="tns:getIDHSsResponse"/>
+         <xs:element name="getOPAreas" type="tns:getOPAreas"/>
+         <xs:element name="getOPAreasResponse" type="tns:getOPAreasResponse"/>
+         <xs:element name="getOrgs" type="tns:getOrgs"/>
+         <xs:element name="getOrgsResponse" type="tns:getOrgsResponse"/>
+         <xs:element name="getOwners" type="tns:getOwners"/>
+         <xs:element name="getOwnersResponse" type="tns:getOwnersResponse"/>
+         <xs:element name="getPlatformTypes" type="tns:getPlatformTypes"/>
+         <xs:element name="getPlatformTypesResponse" type="tns:getPlatformTypesResponse"/>
+         <xs:element name="getPlatforms" type="tns:getPlatforms"/>
+         <xs:element name="getPlatformsResponse" type="tns:getPlatformsResponse"/>
+         <xs:element name="getPoliticalSensitivities" type="tns:getPoliticalSensitivities"/>
+         <xs:element name="getPoliticalSensitivitiesResponse" type="tns:getPoliticalSensitivitiesResponse"/>
+         <xs:element name="getProducers" type="tns:getProducers"/>
+         <xs:element name="getProducersResponse" type="tns:getProducersResponse"/>
+         <xs:element name="getPrograms" type="tns:getPrograms"/>
+         <xs:element name="getProgramsResponse" type="tns:getProgramsResponse"/>
+         <xs:element name="getReportPeriods" type="tns:getReportPeriods"/>
+         <xs:element name="getReportPeriodsResponse" type="tns:getReportPeriodsResponse"/>
+         <xs:element name="getReportProducts" type="tns:getReportProducts"/>
+         <xs:element name="getReportProductsResponse" type="tns:getReportProductsResponse"/>
+         <xs:element name="getRiskCapabilities" type="tns:getRiskCapabilities"/>
+         <xs:element name="getRiskCapabilitiesResponse" type="tns:getRiskCapabilitiesResponse"/>
+         <xs:element name="getRiskIntentions" type="tns:getRiskIntentions"/>
+         <xs:element name="getRiskIntentionsResponse" type="tns:getRiskIntentionsResponse"/>
+         <xs:element name="getSensorTypes" type="tns:getSensorTypes"/>
+         <xs:element name="getSensorTypesResponse" type="tns:getSensorTypesResponse"/>
+         <xs:element name="getSensors" type="tns:getSensors"/>
+         <xs:element name="getSensorsResponse" type="tns:getSensorsResponse"/>
+         <xs:element name="getStandingEEICodes" type="tns:getStandingEEICodes"/>
+         <xs:element name="getStandingEEICodesResponse" type="tns:getStandingEEICodesResponse"/>
+         <xs:element name="getStrategicInfluences" type="tns:getStrategicInfluences"/>
+         <xs:element name="getStrategicInfluencesResponse" type="tns:getStrategicInfluencesResponse"/>
+         <xs:element name="getSystemTime" type="tns:getSystemTime"/>
+         <xs:element name="getSystemTimeResponse" type="tns:getSystemTimeResponse"/>
+         <xs:element name="getTheaters" type="tns:getTheaters"/>
+         <xs:element name="getTheatersResponse" type="tns:getTheatersResponse"/>
+         <xs:element name="getTracks" type="tns:getTracks"/>
+         <xs:element name="getTracksResponse" type="tns:getTracksResponse"/>
+         <xs:element name="getInfoneedDerivedFrom" type="tns:getInfoneedDerivedFrom"/>
+         <xs:element name="getInfoneedDerivedFromResponse" type="tns:getInfoneedDerivedFromResponse"/>
+         <xs:element name="getNonSigintDiscipline" type="tns:getNonSigintDiscipline"/>
+         <xs:element name="getNonSigintDisciplineResponse" type="tns:getNonSigintDisciplineResponse"/>
+         <xs:element name="getNsrpClassifications" type="tns:getNsrpClassifications"/>
+         <xs:element name="getNsrpClassificationsResponse" type="tns:getNsrpClassificationsResponse"/>
+         <xs:element name="getParametricMeasNode" type="tns:getParametricMeasNode"/>
+         <xs:element name="getParametricMeasNodeResponse" type="tns:getParametricMeasNodeResponse"/>
+         <xs:element name="getPortionMarkings" type="tns:getPortionMarkings"/>
+         <xs:element name="getPortionMarkingsResponse" type="tns:getPortionMarkingsResponse"/>
+         <xs:element name="getReportingCriteriaDeliveryMechanisms" type="tns:getReportingCriteriaDeliveryMechanisms"/>
+         <xs:element name="getReportingCriteriaDeliveryMechanismsResponse" type="tns:getReportingCriteriaDeliveryMechanismsResponse"/>
+         <xs:element name="getReportingCriteriaReportingTimeliness" type="tns:getReportingCriteriaReportingTimeliness"/>
+         <xs:element name="getReportingCriteriaReportingTimelinessResponse" type="tns:getReportingCriteriaReportingTimelinessResponse"/>
+         <xs:element name="getReportingCriteriaReportTypes" type="tns:getReportingCriteriaReportTypes"/>
+         <xs:element name="getReportingCriteriaReportTypesResponse" type="tns:getReportingCriteriaReportTypesResponse"/>
+         <xs:element name="getSigintEeiWeaponSystemNames" type="tns:getSigintEeiWeaponSystemNames"/>
+         <xs:element name="getSigintEeiWeaponSystemNamesResponse" type="tns:getSigintEeiWeaponSystemNamesResponse"/>
+         <xs:element name="getSigintEeiWeaponSystemTypes" type="tns:getSigintEeiWeaponSystemTypes"/>
+         <xs:element name="getSigintEeiWeaponSystemTypesResponse" type="tns:getSigintEeiWeaponSystemTypesResponse"/>
+         <xs:element name="getSoiFunctions" type="tns:getSoiFunctions"/>
+         <xs:element name="getSoiFunctionsResponse" type="tns:getSoiFunctionsResponse"/>
+         <xs:element name="getSoiSignals" type="tns:getSoiSignals"/>
+         <xs:element name="getSoiSignalsResponse" type="tns:getSoiSignalsResponse"/>
+         <xs:element name="getSupportedElements" type="tns:getSupportedElements"/>
+         <xs:element name="getSupportedElementsResponse" type="tns:getSupportedElementsResponse"/>
+         <xs:complexType name="getSensors">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="arg0" type="ns1:prismDisciplineRequest"/>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="getSensorsResponse">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="return" type="ns1:prismSensorResponse"/>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="getSensorTypes">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="arg0" type="ns1:prismDisciplineRequest"/>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="getSensorTypesResponse">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="return" type="ns1:prismSensorTypeResponse"/>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="getTheaters">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="arg0" type="ns1:prismRequest"/>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="getTheatersResponse">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="return" type="ns1:prismTheaterResponse"/>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="getOrgs">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="arg0" type="ns1:prismDisciplineRequest"/>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="getOrgsResponse">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="return" type="ns1:prismOrgResponse"/>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="getOwners">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="arg0" type="ns1:prismRequest"/>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="getOwnersResponse">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="return" type="ns1:prismOwnerResponse"/>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="getCountryCodes">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="arg0" type="ns1:prismRequest"/>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="getCountryCodesResponse">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="return" type="ns1:prismCountryCodeResponse"/>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="getGeoRegions">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="arg0" type="ns1:prismRequest"/>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="getGeoRegionsResponse">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="return" type="ns1:prismGeoRegionResponse"/>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="getProducers">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="arg0" type="ns1:prismRequest"/>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="getProducersResponse">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="return" type="ns1:prismProducerResponse"/>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="getIDHSs">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="arg0" type="ns1:prismRequest"/>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="getIDHSsResponse">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="return" type="ns1:prismidhsResponse"/>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="getCMXCATs">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="arg0" type="ns1:prismRequest"/>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="getCMXCATsResponse">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="return" type="ns1:prismcmxcatResponse"/>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="getReportPeriods">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="arg0" type="ns1:prismRequest"/>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="getReportPeriodsResponse">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="return" type="ns1:prismReportPeriodResponse"/>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="getReportProducts">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="arg0" type="ns1:prismRequest"/>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="getReportProductsResponse">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="return" type="ns1:prismReportProductResponse"/>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="getStandingEEICodes">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="arg0" type="ns1:prismRequest"/>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="getStandingEEICodesResponse">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="return" type="ns1:prismStandingEEICodeResponse"/>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="getCRMasintTypes">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="arg0" type="ns1:prismRequest"/>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="getCRMasintTypesResponse">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="return" type="ns1:prismcrMasintTypeResponse"/>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="getBases">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="arg0" type="ns1:prismRequest"/>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="getBasesResponse">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="return" type="ns1:prismBaseResponse"/>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="getPlatformTypes">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="arg0" type="ns1:prismDisciplineRequest"/>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="getPlatformTypesResponse">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="return" type="ns1:prismPlatformTypeResponse"/>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="getPlatforms">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="arg0" type="ns1:prismDisciplineRequest"/>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="getPlatformsResponse">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="return" type="ns1:prismPlatformResponse"/>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="getAOIs">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="arg0" type="ns1:prismRequest"/>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="getAOIsResponse">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="return" type="ns1:prismaoiResponse"/>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="getTracks">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="arg0" type="ns1:prismRequest"/>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="getTracksResponse">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="return" type="ns1:prismTrackResponse"/>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="getPrograms">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="arg0" type="ns1:prismRequest"/>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="getProgramsResponse">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="return" type="ns1:prismProgramResponse"/>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="getRiskCapabilities">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="arg0" type="ns1:prismRequest"/>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="getRiskCapabilitiesResponse">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="return" type="ns1:prismRiskCapabilityResponse"/>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="getCollectionProbabilities">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="arg0" type="ns1:prismRequest"/>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="getCollectionProbabilitiesResponse">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="return" type="ns1:prismCollectionProbabilityResponse"/>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="getRiskIntentions">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="arg0" type="ns1:prismRequest"/>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="getRiskIntentionsResponse">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="return" type="ns1:prismRiskIntentionResponse"/>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="getPoliticalSensitivities">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="arg0" type="ns1:prismRequest"/>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="getPoliticalSensitivitiesResponse">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="return" type="ns1:prismPoliticalSensitivityResponse"/>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="getAnticipatedGains">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="arg0" type="ns1:prismRequest"/>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="getAnticipatedGainsResponse">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="return" type="ns1:prismAnticipatedGainResponse"/>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="getStrategicInfluences">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="arg0" type="ns1:prismRequest"/>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="getStrategicInfluencesResponse">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="return" type="ns1:prismStrategicInfluenceResponse"/>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="getDGSs">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="arg0" type="ns1:prismRequest"/>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="getDGSsResponse">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="return" type="ns1:prismdgsResponse"/>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="getOPAreas">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="arg0" type="ns1:prismRequest"/>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="getOPAreasResponse">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="return" type="ns1:prismopAreaResponse"/>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="getSystemTime">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="arg0" type="ns1:prismRequest"/>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="getSystemTimeResponse">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="return" type="ns1:prismSystemTimeResponse"/>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="getInfoneedDerivedFrom">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="arg0" type="ns1:prismRequest"/>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="getInfoneedDerivedFromResponse">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="return" type="ns1:prismInfoneedDerivedFromResponse"/>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="getNonSigintDiscipline">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="arg0" type="ns1:prismRequest"/>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="getNonSigintDisciplineResponse">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="return" type="ns1:prismNonSigintDisciplineResponse"/>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="getNsrpClassifications">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="arg0" type="ns1:prismRequest"/>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="getNsrpClassificationsResponse">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="return" type="ns1:prismNsrpClassificationResponse"/>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="getParametricMeasNode">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="arg0" type="ns1:prismRequest"/>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="getParametricMeasNodeResponse">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="return" type="ns1:prismParametricMeasNodeResponse"/>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="getPortionMarkings">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="arg0" type="ns1:prismRequest"/>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="getPortionMarkingsResponse">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="return" type="ns1:prismPortionMarkingResponse"/>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="getReportingCriteriaDeliveryMechanisms">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="arg0" type="ns1:prismRequest"/>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="getReportingCriteriaDeliveryMechanismsResponse">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="return" type="ns1:prismReportingCriteriaDeliveryMechanismResponse"/>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="getReportingCriteriaReportingTimeliness">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="arg0" type="ns1:prismRequest"/>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="getReportingCriteriaReportingTimelinessResponse">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="return" type="ns1:prismReportingCriteriaReportingTimelinessResponse"/>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="getReportingCriteriaReportTypes">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="arg0" type="ns1:prismRequest"/>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="getReportingCriteriaReportTypesResponse">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="return" type="ns1:prismReportingCriteriaReportTypeResponse"/>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="getSigintEeiWeaponSystemNames">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="arg0" type="ns1:prismRequest"/>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="getSigintEeiWeaponSystemNamesResponse">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="return" type="ns1:prismSigintEeiWeaponSystemNameResponse"/>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="getSigintEeiWeaponSystemTypes">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="arg0" type="ns1:prismRequest"/>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="getSigintEeiWeaponSystemTypesResponse">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="return" type="ns1:prismSigintEeiWeaponSystemTypeResponse"/>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="getSoiFunctions">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="arg0" type="ns1:prismRequest"/>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="getSoiFunctionsResponse">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="return" type="ns1:prismSoiFunctionResponse"/>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="getSoiSignals">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="arg0" type="ns1:prismRequest"/>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="getSoiSignalsResponse">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="return" type="ns1:prismSoiSignalResponse"/>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="getSupportedElements">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="arg0" type="ns1:prismRequest"/>
+            </xs:sequence>
+         </xs:complexType>
+         <xs:complexType name="getSupportedElementsResponse">
+            <xs:sequence>
+               <xs:element minOccurs="0" name="return" type="ns1:prismSupportedElementResponse"/>
+            </xs:sequence>
+         </xs:complexType>
+      </xs:schema>
+   </types>
+   <message name="PRISMBaseDataWSEndPointv701_getTracks">
+      <part name="getTracks" element="tns:getTracks"/>
+   </message>
+   <message name="PRISMBaseDataWSEndPointv701_getProducersResponse">
+      <part name="getProducersResponse" element="tns:getProducersResponse"/>
+   </message>
+   <message name="PRISMBaseDataWSEndPointv701_getReportProductsResponse">
+      <part name="getReportProductsResponse" element="tns:getReportProductsResponse"/>
+   </message>
+   <message name="PRISMBaseDataWSEndPointv701_getPoliticalSensitivities">
+      <part name="getPoliticalSensitivities" element="tns:getPoliticalSensitivities"/>
+   </message>
+   <message name="PRISMBaseDataWSEndPointv701_getAnticipatedGainsResponse">
+      <part name="getAnticipatedGainsResponse" element="tns:getAnticipatedGainsResponse"/>
+   </message>
+   <message name="PRISMBaseDataWSEndPointv701_getSensors">
+      <part name="getSensors" element="tns:getSensors"/>
+   </message>
+   <message name="PRISMBaseDataWSEndPointv701_getGeoRegions">
+      <part name="getGeoRegions" element="tns:getGeoRegions"/>
+   </message>
+   <message name="PRISMBaseDataWSEndPointv701_getOwners">
+      <part name="getOwners" element="tns:getOwners"/>
+   </message>
+   <message name="PRISMBaseDataWSEndPointv701_getStrategicInfluences">
+      <part name="getStrategicInfluences" element="tns:getStrategicInfluences"/>
+   </message>
+   <message name="PRISMBaseDataWSEndPointv701_getBases">
+      <part name="getBases" element="tns:getBases"/>
+   </message>
+   <message name="PRISMBaseDataWSEndPointv701_getOPAreas">
+      <part name="getOPAreas" element="tns:getOPAreas"/>
+   </message>
+   <message name="PRISMBaseDataWSEndPointv701_getPlatformTypesResponse">
+      <part name="getPlatformTypesResponse" element="tns:getPlatformTypesResponse"/>
+   </message>
+   <message name="PRISMBaseDataWSEndPointv701_getRiskIntentionsResponse">
+      <part name="getRiskIntentionsResponse" element="tns:getRiskIntentionsResponse"/>
+   </message>
+   <message name="PRISMBaseDataWSEndPointv701_getIDHSs">
+      <part name="getIDHSs" element="tns:getIDHSs"/>
+   </message>
+   <message name="PRISMBaseDataWSEndPointv701_getPlatforms">
+      <part name="getPlatforms" element="tns:getPlatforms"/>
+   </message>
+   <message name="PRISMBaseDataWSEndPointv701_getDGSs">
+      <part name="getDGSs" element="tns:getDGSs"/>
+   </message>
+   <message name="PRISMBaseDataWSEndPointv701_getRiskCapabilities">
+      <part name="getRiskCapabilities" element="tns:getRiskCapabilities"/>
+   </message>
+   <message name="PRISMBaseDataWSEndPointv701_getDGSsResponse">
+      <part name="getDGSsResponse" element="tns:getDGSsResponse"/>
+   </message>
+   <message name="PRISMBaseDataWSEndPointv701_getStandingEEICodesResponse">
+      <part name="getStandingEEICodesResponse" element="tns:getStandingEEICodesResponse"/>
+   </message>
+   <message name="PRISMBaseDataWSEndPointv701_getPlatformTypes">
+      <part name="getPlatformTypes" element="tns:getPlatformTypes"/>
+   </message>
+   <message name="PRISMBaseDataWSEndPointv701_getOrgsResponse">
+      <part name="getOrgsResponse" element="tns:getOrgsResponse"/>
+   </message>
+   <message name="PRISMBaseDataWSEndPointv701_getSensorTypes">
+      <part name="getSensorTypes" element="tns:getSensorTypes"/>
+   </message>
+   <message name="PRISMBaseDataWSEndPointv701_getSensorsResponse">
+      <part name="getSensorsResponse" element="tns:getSensorsResponse"/>
+   </message>
+   <message name="PRISMBaseDataWSEndPointv701_getReportProducts">
+      <part name="getReportProducts" element="tns:getReportProducts"/>
+   </message>
+   <message name="PRISMBaseDataWSEndPointv701_getAnticipatedGains">
+      <part name="getAnticipatedGains" element="tns:getAnticipatedGains"/>
+   </message>
+   <message name="PRISMBaseDataWSEndPointv701_getCollectionProbabilities">
+      <part name="getCollectionProbabilities" element="tns:getCollectionProbabilities"/>
+   </message>
+   <message name="PRISMBaseDataWSEndPointv701_getOwnersResponse">
+      <part name="getOwnersResponse" element="tns:getOwnersResponse"/>
+   </message>
+   <message name="PRISMBaseDataWSEndPointv701_getAOIs">
+      <part name="getAOIs" element="tns:getAOIs"/>
+   </message>
+   <message name="PRISMBaseDataWSEndPointv701_getProgramsResponse">
+      <part name="getProgramsResponse" element="tns:getProgramsResponse"/>
+   </message>
+   <message name="PRISMBaseDataWSEndPointv701_getOrgs">
+      <part name="getOrgs" element="tns:getOrgs"/>
+   </message>
+   <message name="PRISMBaseDataWSEndPointv701_getCountryCodes">
+      <part name="getCountryCodes" element="tns:getCountryCodes"/>
+   </message>
+   <message name="PRISMBaseDataWSEndPointv701_getRiskCapabilitiesResponse">
+      <part name="getRiskCapabilitiesResponse" element="tns:getRiskCapabilitiesResponse"/>
+   </message>
+   <message name="PRISMBaseDataWSEndPointv701_getCollectionProbabilitiesResponse">
+      <part name="getCollectionProbabilitiesResponse" element="tns:getCollectionProbabilitiesResponse"/>
+   </message>
+   <message name="PRISMBaseDataWSEndPointv701_getIDHSsResponse">
+      <part name="getIDHSsResponse" element="tns:getIDHSsResponse"/>
+   </message>
+   <message name="PRISMBaseDataWSEndPointv701_getCountryCodesResponse">
+      <part name="getCountryCodesResponse" element="tns:getCountryCodesResponse"/>
+   </message>
+   <message name="PRISMBaseDataWSEndPointv701_getStrategicInfluencesResponse">
+      <part name="getStrategicInfluencesResponse" element="tns:getStrategicInfluencesResponse"/>
+   </message>
+   <message name="PRISMBaseDataWSEndPointv701_getAOIsResponse">
+      <part name="getAOIsResponse" element="tns:getAOIsResponse"/>
+   </message>
+   <message name="PRISMBaseDataWSEndPointv701_getSensorTypesResponse">
+      <part name="getSensorTypesResponse" element="tns:getSensorTypesResponse"/>
+   </message>
+   <message name="PRISMBaseDataWSEndPointv701_getTheaters">
+      <part name="getTheaters" element="tns:getTheaters"/>
+   </message>
+   <message name="PRISMBaseDataWSEndPointv701_getRiskIntentions">
+      <part name="getRiskIntentions" element="tns:getRiskIntentions"/>
+   </message>
+   <message name="PRISMBaseDataWSEndPointv701_getCRMasintTypes">
+      <part name="getCRMasintTypes" element="tns:getCRMasintTypes"/>
+   </message>
+   <message name="PRISMBaseDataWSEndPointv701_getTheatersResponse">
+      <part name="getTheatersResponse" element="tns:getTheatersResponse"/>
+   </message>
+   <message name="PRISMBaseDataWSEndPointv701_getCMXCATs">
+      <part name="getCMXCATs" element="tns:getCMXCATs"/>
+   </message>
+   <message name="PRISMBaseDataWSEndPointv701_getCRMasintTypesResponse">
+      <part name="getCRMasintTypesResponse" element="tns:getCRMasintTypesResponse"/>
+   </message>
+   <message name="PRISMBaseDataWSEndPointv701_getTracksResponse">
+      <part name="getTracksResponse" element="tns:getTracksResponse"/>
+   </message>
+   <message name="PRISMBaseDataWSEndPointv701_getProducers">
+      <part name="getProducers" element="tns:getProducers"/>
+   </message>
+   <message name="PRISMBaseDataWSEndPointv701_getCMXCATsResponse">
+      <part name="getCMXCATsResponse" element="tns:getCMXCATsResponse"/>
+   </message>
+   <message name="PRISMBaseDataWSEndPointv701_getPlatformsResponse">
+      <part name="getPlatformsResponse" element="tns:getPlatformsResponse"/>
+   </message>
+   <message name="PRISMBaseDataWSEndPointv701_getStandingEEICodes">
+      <part name="getStandingEEICodes" element="tns:getStandingEEICodes"/>
+   </message>
+   <message name="PRISMBaseDataWSEndPointv701_getPrograms">
+      <part name="getPrograms" element="tns:getPrograms"/>
+   </message>
+   <message name="PRISMBaseDataWSEndPointv701_getGeoRegionsResponse">
+      <part name="getGeoRegionsResponse" element="tns:getGeoRegionsResponse"/>
+   </message>
+   <message name="PRISMBaseDataWSEndPointv701_getOPAreasResponse">
+      <part name="getOPAreasResponse" element="tns:getOPAreasResponse"/>
+   </message>
+   <message name="PRISMBaseDataWSEndPointv701_getReportPeriodsResponse">
+      <part name="getReportPeriodsResponse" element="tns:getReportPeriodsResponse"/>
+   </message>
+   <message name="PRISMBaseDataWSEndPointv701_getReportPeriods">
+      <part name="getReportPeriods" element="tns:getReportPeriods"/>
+   </message>
+   <message name="PRISMBaseDataWSEndPointv701_getBasesResponse">
+      <part name="getBasesResponse" element="tns:getBasesResponse"/>
+   </message>
+   <message name="PRISMBaseDataWSEndPointv701_getPoliticalSensitivitiesResponse">
+      <part name="getPoliticalSensitivitiesResponse" element="tns:getPoliticalSensitivitiesResponse"/>
+   </message>
+   <message name="PRISMBaseDataWSEndPointv701_getSystemTimeResponse">
+      <part name="getSystemTimeResponse" element="tns:getSystemTimeResponse"/>
+   </message>
+   <message name="PRISMBaseDataWSEndPointv701_getSystemTime">
+      <part name="getSystemTime" element="tns:getSystemTime"/>
+   </message>
+   <message name="PRISMBaseDataWSEndPointv701_getInfoneedDerivedFromResponse">
+      <part name="getInfoneedDerivedFromResponse" element="tns:getInfoneedDerivedFromResponse"/>
+   </message>
+   <message name="PRISMBaseDataWSEndPointv701_getInfoneedDerivedFrom">
+      <part name="getInfoneedDerivedFrom" element="tns:getInfoneedDerivedFrom"/>
+   </message>
+   <message name="PRISMBaseDataWSEndPointv701_getNonSigintDiscipline">
+      <part name="getNonSigintDiscipline" element="tns:getNonSigintDiscipline"/>
+   </message>
+   <message name="PRISMBaseDataWSEndPointv701_getNonSigintDisciplineResponse">
+      <part name="getNonSigintDisciplineResponse" element="tns:getNonSigintDisciplineResponse"/>
+   </message>
+   <message name="PRISMBaseDataWSEndPointv701_getNsrpClassifications">
+      <part name="getNsrpClassifications" element="tns:getNsrpClassifications"/>
+   </message>
+   <message name="PRISMBaseDataWSEndPointv701_getNsrpClassificationsResponse">
+      <part name="getNsrpClassificationsResponse" element="tns:getNsrpClassificationsResponse"/>
+   </message>
+   <message name="PRISMBaseDataWSEndPointv701_getParametricMeasNode">
+      <part name="getParametricMeasNode" element="tns:getParametricMeasNode"/>
+   </message>
+   <message name="PRISMBaseDataWSEndPointv701_getParametricMeasNodeResponse">
+      <part name="getParametricMeasNodeResponse" element="tns:getParametricMeasNodeResponse"/>
+   </message>
+   <message name="PRISMBaseDataWSEndPointv701_getPortionMarkings">
+      <part name="getPortionMarkings" element="tns:getPortionMarkings"/>
+   </message>
+   <message name="PRISMBaseDataWSEndPointv701_getPortionMarkingsResponse">
+      <part name="getPortionMarkingsResponse" element="tns:getPortionMarkingsResponse"/>
+   </message>
+   <message name="PRISMBaseDataWSEndPointv701_getReportingCriteriaDeliveryMechanisms">
+      <part name="getReportingCriteriaDeliveryMechanisms" element="tns:getReportingCriteriaDeliveryMechanisms"/>
+   </message>
+   <message name="PRISMBaseDataWSEndPointv701_getReportingCriteriaDeliveryMechanismsResponse">
+      <part name="getReportingCriteriaDeliveryMechanismsResponse" element="tns:getReportingCriteriaDeliveryMechanismsResponse"/>
+   </message>
+   <message name="PRISMBaseDataWSEndPointv701_getReportingCriteriaReportingTimeliness">
+      <part name="getReportingCriteriaReportingTimeliness" element="tns:getReportingCriteriaReportingTimeliness"/>
+   </message>
+   <message name="PRISMBaseDataWSEndPointv701_getReportingCriteriaReportingTimelinessResponse">
+      <part name="getReportingCriteriaReportingTimelinessResponse" element="tns:getReportingCriteriaReportingTimelinessResponse"/>
+   </message>
+   <message name="PRISMBaseDataWSEndPointv701_getReportingCriteriaReportTypes">
+      <part name="getReportingCriteriaReportTypes" element="tns:getReportingCriteriaReportTypes"/>
+   </message>
+   <message name="PRISMBaseDataWSEndPointv701_getReportingCriteriaReportTypesResponse">
+      <part name="geReportingCriteriaReportTypesResponse" element="tns:getReportingCriteriaReportTypesResponse"/>
+   </message>
+   <message name="PRISMBaseDataWSEndPointv701_getSigintEeiWeaponSystemNames">
+      <part name="getSigintEeiWeaponSystemNames" element="tns:getSigintEeiWeaponSystemNames"/>
+   </message>
+   <message name="PRISMBaseDataWSEndPointv701_getSigintEeiWeaponSystemNamesResponse">
+      <part name="getSigintEeiWeaponSystemNamesResponse" element="tns:getSigintEeiWeaponSystemNamesResponse"/>
+   </message>
+   <message name="PRISMBaseDataWSEndPointv701_getSigintEeiWeaponSystemTypes">
+      <part name="getSigintEeiWeaponSystemTypes" element="tns:getSigintEeiWeaponSystemTypes"/>
+   </message>
+   <message name="PRISMBaseDataWSEndPointv701_getSigintEeiWeaponSystemTypesResponse">
+      <part name="getSigintEeiWeaponSystemTypesResponse" element="tns:getSigintEeiWeaponSystemTypesResponse"/>
+   </message>
+   <message name="PRISMBaseDataWSEndPointv701_getSoiFunctions">
+      <part name="getSoiFunctions" element="tns:getSoiFunctions"/>
+   </message>
+   <message name="PRISMBaseDataWSEndPointv701_getSoiFunctionsResponse">
+      <part name="getSoiFunctionsResponse" element="tns:getSoiFunctionsResponse"/>
+   </message>
+   <message name="PRISMBaseDataWSEndPointv701_getSoiSignals">
+      <part name="getSoiSignals" element="tns:getSoiSignals"/>
+   </message>
+   <message name="PRISMBaseDataWSEndPointv701_getSoiSignalsResponse">
+      <part name="getSoiSignalsResponse" element="tns:getSoiSignalsResponse"/>
+   </message>
+   <message name="PRISMBaseDataWSEndPointv701_getSupportedElements">
+      <part name="getSupportedElements" element="tns:getSupportedElements"/>
+   </message>
+   <message name="PRISMBaseDataWSEndPointv701_getSupportedElementsResponse">
+      <part name="getSupportedElementsResponse" element="tns:getSupportedElementsResponse"/>
+   </message>
+   <portType name="PRISMBaseDataWSEndPointv701">
+      <operation name="getAOIs" parameterOrder="getAOIs">
+         <input message="tns:PRISMBaseDataWSEndPointv701_getAOIs"/>
+         <output message="tns:PRISMBaseDataWSEndPointv701_getAOIsResponse"/>
+      </operation>
+      <operation name="getAnticipatedGains" parameterOrder="getAnticipatedGains">
+         <input message="tns:PRISMBaseDataWSEndPointv701_getAnticipatedGains"/>
+         <output message="tns:PRISMBaseDataWSEndPointv701_getAnticipatedGainsResponse"/>
+      </operation>
+      <operation name="getBases" parameterOrder="getBases">
+         <input message="tns:PRISMBaseDataWSEndPointv701_getBases"/>
+         <output message="tns:PRISMBaseDataWSEndPointv701_getBasesResponse"/>
+      </operation>
+      <operation name="getCMXCATs" parameterOrder="getCMXCATs">
+         <input message="tns:PRISMBaseDataWSEndPointv701_getCMXCATs"/>
+         <output message="tns:PRISMBaseDataWSEndPointv701_getCMXCATsResponse"/>
+      </operation>
+      <operation name="getCRMasintTypes" parameterOrder="getCRMasintTypes">
+         <input message="tns:PRISMBaseDataWSEndPointv701_getCRMasintTypes"/>
+         <output message="tns:PRISMBaseDataWSEndPointv701_getCRMasintTypesResponse"/>
+      </operation>
+      <operation name="getCollectionProbabilities" parameterOrder="getCollectionProbabilities">
+         <input message="tns:PRISMBaseDataWSEndPointv701_getCollectionProbabilities"/>
+         <output message="tns:PRISMBaseDataWSEndPointv701_getCollectionProbabilitiesResponse"/>
+      </operation>
+      <operation name="getCountryCodes" parameterOrder="getCountryCodes">
+         <input message="tns:PRISMBaseDataWSEndPointv701_getCountryCodes"/>
+         <output message="tns:PRISMBaseDataWSEndPointv701_getCountryCodesResponse"/>
+      </operation>
+      <operation name="getDGSs" parameterOrder="getDGSs">
+         <input message="tns:PRISMBaseDataWSEndPointv701_getDGSs"/>
+         <output message="tns:PRISMBaseDataWSEndPointv701_getDGSsResponse"/>
+      </operation>
+      <operation name="getGeoRegions" parameterOrder="getGeoRegions">
+         <input message="tns:PRISMBaseDataWSEndPointv701_getGeoRegions"/>
+         <output message="tns:PRISMBaseDataWSEndPointv701_getGeoRegionsResponse"/>
+      </operation>
+      <operation name="getIDHSs" parameterOrder="getIDHSs">
+         <input message="tns:PRISMBaseDataWSEndPointv701_getIDHSs"/>
+         <output message="tns:PRISMBaseDataWSEndPointv701_getIDHSsResponse"/>
+      </operation>
+      <operation name="getOPAreas" parameterOrder="getOPAreas">
+         <input message="tns:PRISMBaseDataWSEndPointv701_getOPAreas"/>
+         <output message="tns:PRISMBaseDataWSEndPointv701_getOPAreasResponse"/>
+      </operation>
+      <operation name="getOrgs" parameterOrder="getOrgs">
+         <input message="tns:PRISMBaseDataWSEndPointv701_getOrgs"/>
+         <output message="tns:PRISMBaseDataWSEndPointv701_getOrgsResponse"/>
+      </operation>
+      <operation name="getOwners" parameterOrder="getOwners">
+         <input message="tns:PRISMBaseDataWSEndPointv701_getOwners"/>
+         <output message="tns:PRISMBaseDataWSEndPointv701_getOwnersResponse"/>
+      </operation>
+      <operation name="getPlatformTypes" parameterOrder="getPlatformTypes">
+         <input message="tns:PRISMBaseDataWSEndPointv701_getPlatformTypes"/>
+         <output message="tns:PRISMBaseDataWSEndPointv701_getPlatformTypesResponse"/>
+      </operation>
+      <operation name="getPlatforms" parameterOrder="getPlatforms">
+         <input message="tns:PRISMBaseDataWSEndPointv701_getPlatforms"/>
+         <output message="tns:PRISMBaseDataWSEndPointv701_getPlatformsResponse"/>
+      </operation>
+      <operation name="getPoliticalSensitivities" parameterOrder="getPoliticalSensitivities">
+         <input message="tns:PRISMBaseDataWSEndPointv701_getPoliticalSensitivities"/>
+         <output message="tns:PRISMBaseDataWSEndPointv701_getPoliticalSensitivitiesResponse"/>
+      </operation>
+      <operation name="getProducers" parameterOrder="getProducers">
+         <input message="tns:PRISMBaseDataWSEndPointv701_getProducers"/>
+         <output message="tns:PRISMBaseDataWSEndPointv701_getProducersResponse"/>
+      </operation>
+      <operation name="getPrograms" parameterOrder="getPrograms">
+         <input message="tns:PRISMBaseDataWSEndPointv701_getPrograms"/>
+         <output message="tns:PRISMBaseDataWSEndPointv701_getProgramsResponse"/>
+      </operation>
+      <operation name="getReportPeriods" parameterOrder="getReportPeriods">
+         <input message="tns:PRISMBaseDataWSEndPointv701_getReportPeriods"/>
+         <output message="tns:PRISMBaseDataWSEndPointv701_getReportPeriodsResponse"/>
+      </operation>
+      <operation name="getReportProducts" parameterOrder="getReportProducts">
+         <input message="tns:PRISMBaseDataWSEndPointv701_getReportProducts"/>
+         <output message="tns:PRISMBaseDataWSEndPointv701_getReportProductsResponse"/>
+      </operation>
+      <operation name="getRiskCapabilities" parameterOrder="getRiskCapabilities">
+         <input message="tns:PRISMBaseDataWSEndPointv701_getRiskCapabilities"/>
+         <output message="tns:PRISMBaseDataWSEndPointv701_getRiskCapabilitiesResponse"/>
+      </operation>
+      <operation name="getRiskIntentions" parameterOrder="getRiskIntentions">
+         <input message="tns:PRISMBaseDataWSEndPointv701_getRiskIntentions"/>
+         <output message="tns:PRISMBaseDataWSEndPointv701_getRiskIntentionsResponse"/>
+      </operation>
+      <operation name="getSensorTypes" parameterOrder="getSensorTypes">
+         <input message="tns:PRISMBaseDataWSEndPointv701_getSensorTypes"/>
+         <output message="tns:PRISMBaseDataWSEndPointv701_getSensorTypesResponse"/>
+      </operation>
+      <operation name="getSensors" parameterOrder="getSensors">
+         <input message="tns:PRISMBaseDataWSEndPointv701_getSensors"/>
+         <output message="tns:PRISMBaseDataWSEndPointv701_getSensorsResponse"/>
+      </operation>
+      <operation name="getStandingEEICodes" parameterOrder="getStandingEEICodes">
+         <input message="tns:PRISMBaseDataWSEndPointv701_getStandingEEICodes"/>
+         <output message="tns:PRISMBaseDataWSEndPointv701_getStandingEEICodesResponse"/>
+      </operation>
+      <operation name="getStrategicInfluences" parameterOrder="getStrategicInfluences">
+         <input message="tns:PRISMBaseDataWSEndPointv701_getStrategicInfluences"/>
+         <output message="tns:PRISMBaseDataWSEndPointv701_getStrategicInfluencesResponse"/>
+      </operation>
+      <operation name="getSystemTime" parameterOrder="getSystemTime">
+         <input message="tns:PRISMBaseDataWSEndPointv701_getSystemTime"/>
+         <output message="tns:PRISMBaseDataWSEndPointv701_getSystemTimeResponse"/>
+      </operation>
+      <operation name="getTheaters" parameterOrder="getTheaters">
+         <input message="tns:PRISMBaseDataWSEndPointv701_getTheaters"/>
+         <output message="tns:PRISMBaseDataWSEndPointv701_getTheatersResponse"/>
+      </operation>
+      <operation name="getTracks" parameterOrder="getTracks">
+         <input message="tns:PRISMBaseDataWSEndPointv701_getTracks"/>
+         <output message="tns:PRISMBaseDataWSEndPointv701_getTracksResponse"/>
+      </operation>
+      <operation name="getInfoneedDerivedFrom" parameterOrder="getInfoneedDerivedFrom">
+         <input message="tns:PRISMBaseDataWSEndPointv701_getInfoneedDerivedFrom"/>
+         <output message="tns:PRISMBaseDataWSEndPointv701_getInfoneedDerivedFromResponse"/>
+      </operation>
+      <operation name="getNonSigintDiscipline" parameterOrder="getNonSigintDiscipline">
+         <input message="tns:PRISMBaseDataWSEndPointv701_getNonSigintDiscipline"/>
+         <output message="tns:PRISMBaseDataWSEndPointv701_getNonSigintDisciplineResponse"/>
+      </operation>
+      <operation name="getNsrpClassifications" parameterOrder="getNsrpClassifications">
+         <input message="tns:PRISMBaseDataWSEndPointv701_getNsrpClassifications"/>
+         <output message="tns:PRISMBaseDataWSEndPointv701_getNsrpClassificationsResponse"/>
+      </operation>
+      <operation name="getParametricMeasNode" parameterOrder="getParametricMeasNode">
+         <input message="tns:PRISMBaseDataWSEndPointv701_getParametricMeasNode"/>
+         <output message="tns:PRISMBaseDataWSEndPointv701_getParametricMeasNodeResponse"/>
+      </operation>
+      <operation name="getPortionMarkings" parameterOrder="getPortionMarkings">
+         <input message="tns:PRISMBaseDataWSEndPointv701_getPortionMarkings"/>
+         <output message="tns:PRISMBaseDataWSEndPointv701_getPortionMarkingsResponse"/>
+      </operation>
+      <operation name="getReportingCriteriaDeliveryMechanisms" parameterOrder="getReportingCriteriaDeliveryMechanisms">
+         <input message="tns:PRISMBaseDataWSEndPointv701_getReportingCriteriaDeliveryMechanisms"/>
+         <output message="tns:PRISMBaseDataWSEndPointv701_getReportingCriteriaDeliveryMechanismsResponse"/>
+      </operation>
+      <operation name="getReportingCriteriaReportingTimeliness" parameterOrder="getReportingCriteriaReportingTimeliness">
+         <input message="tns:PRISMBaseDataWSEndPointv701_getReportingCriteriaReportingTimeliness"/>
+         <output message="tns:PRISMBaseDataWSEndPointv701_getReportingCriteriaReportingTimelinessResponse"/>
+      </operation>
+      <operation name="getReportingCriteriaReportTypes" parameterOrder="getReportingCriteriaReportTypes">
+         <input message="tns:PRISMBaseDataWSEndPointv701_getReportingCriteriaReportTypes"/>
+         <output message="tns:PRISMBaseDataWSEndPointv701_getReportingCriteriaReportTypesResponse"/>
+      </operation>
+      <operation name="getSigintEeiWeaponSystemNames" parameterOrder="getSigintEeiWeaponSystemNames">
+         <input message="tns:PRISMBaseDataWSEndPointv701_getSigintEeiWeaponSystemNames"/>
+         <output message="tns:PRISMBaseDataWSEndPointv701_getSigintEeiWeaponSystemNamesResponse"/>
+      </operation>
+      <operation name="getSigintEeiWeaponSystemTypes" parameterOrder="getSigintEeiWeaponSystemTypes">
+         <input message="tns:PRISMBaseDataWSEndPointv701_getSigintEeiWeaponSystemTypes"/>
+         <output message="tns:PRISMBaseDataWSEndPointv701_getSigintEeiWeaponSystemTypesResponse"/>
+      </operation>
+      <operation name="getSoiFunctions" parameterOrder="getSoiFunctions">
+         <input message="tns:PRISMBaseDataWSEndPointv701_getSoiFunctions"/>
+         <output message="tns:PRISMBaseDataWSEndPointv701_getSoiFunctionsResponse"/>
+      </operation>
+      <operation name="getSoiSignals" parameterOrder="getSoiSignals">
+         <input message="tns:PRISMBaseDataWSEndPointv701_getSoiSignals"/>
+         <output message="tns:PRISMBaseDataWSEndPointv701_getSoiSignalsResponse"/>
+      </operation>
+      <operation name="getSupportedElements" parameterOrder="getSupportedElements">
+         <input message="tns:PRISMBaseDataWSEndPointv701_getSupportedElements"/>
+         <output message="tns:PRISMBaseDataWSEndPointv701_getSupportedElementsResponse"/>
+      </operation>
+   </portType>
+   <binding name="PRISMBaseDataWSEndPointv701Binding" type="tns:PRISMBaseDataWSEndPointv701">
+      <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+      <operation name="getAOIs">
+         <soap:operation soapAction=""/>
+         <input>
+            <soap:body use="literal"/>
+         </input>
+         <output>
+            <soap:body use="literal"/>
+         </output>
+      </operation>
+      <operation name="getAnticipatedGains">
+         <soap:operation soapAction=""/>
+         <input>
+            <soap:body use="literal"/>
+         </input>
+         <output>
+            <soap:body use="literal"/>
+         </output>
+      </operation>
+      <operation name="getBases">
+         <soap:operation soapAction=""/>
+         <input>
+            <soap:body use="literal"/>
+         </input>
+         <output>
+            <soap:body use="literal"/>
+         </output>
+      </operation>
+      <operation name="getCMXCATs">
+         <soap:operation soapAction=""/>
+         <input>
+            <soap:body use="literal"/>
+         </input>
+         <output>
+            <soap:body use="literal"/>
+         </output>
+      </operation>
+      <operation name="getCRMasintTypes">
+         <soap:operation soapAction=""/>
+         <input>
+            <soap:body use="literal"/>
+         </input>
+         <output>
+            <soap:body use="literal"/>
+         </output>
+      </operation>
+      <operation name="getCollectionProbabilities">
+         <soap:operation soapAction=""/>
+         <input>
+            <soap:body use="literal"/>
+         </input>
+         <output>
+            <soap:body use="literal"/>
+         </output>
+      </operation>
+      <operation name="getCountryCodes">
+         <soap:operation soapAction=""/>
+         <input>
+            <soap:body use="literal"/>
+         </input>
+         <output>
+            <soap:body use="literal"/>
+         </output>
+      </operation>
+      <operation name="getDGSs">
+         <soap:operation soapAction=""/>
+         <input>
+            <soap:body use="literal"/>
+         </input>
+         <output>
+            <soap:body use="literal"/>
+         </output>
+      </operation>
+      <operation name="getGeoRegions">
+         <soap:operation soapAction=""/>
+         <input>
+            <soap:body use="literal"/>
+         </input>
+         <output>
+            <soap:body use="literal"/>
+         </output>
+      </operation>
+      <operation name="getIDHSs">
+         <soap:operation soapAction=""/>
+         <input>
+            <soap:body use="literal"/>
+         </input>
+         <output>
+            <soap:body use="literal"/>
+         </output>
+      </operation>
+      <operation name="getOPAreas">
+         <soap:operation soapAction=""/>
+         <input>
+            <soap:body use="literal"/>
+         </input>
+         <output>
+            <soap:body use="literal"/>
+         </output>
+      </operation>
+      <operation name="getOrgs">
+         <soap:operation soapAction=""/>
+         <input>
+            <soap:body use="literal"/>
+         </input>
+         <output>
+            <soap:body use="literal"/>
+         </output>
+      </operation>
+      <operation name="getOwners">
+         <soap:operation soapAction=""/>
+         <input>
+            <soap:body use="literal"/>
+         </input>
+         <output>
+            <soap:body use="literal"/>
+         </output>
+      </operation>
+      <operation name="getPlatformTypes">
+         <soap:operation soapAction=""/>
+         <input>
+            <soap:body use="literal"/>
+         </input>
+         <output>
+            <soap:body use="literal"/>
+         </output>
+      </operation>
+      <operation name="getPlatforms">
+         <soap:operation soapAction=""/>
+         <input>
+            <soap:body use="literal"/>
+         </input>
+         <output>
+            <soap:body use="literal"/>
+         </output>
+      </operation>
+      <operation name="getPoliticalSensitivities">
+         <soap:operation soapAction=""/>
+         <input>
+            <soap:body use="literal"/>
+         </input>
+         <output>
+            <soap:body use="literal"/>
+         </output>
+      </operation>
+      <operation name="getProducers">
+         <soap:operation soapAction=""/>
+         <input>
+            <soap:body use="literal"/>
+         </input>
+         <output>
+            <soap:body use="literal"/>
+         </output>
+      </operation>
+      <operation name="getPrograms">
+         <soap:operation soapAction=""/>
+         <input>
+            <soap:body use="literal"/>
+         </input>
+         <output>
+            <soap:body use="literal"/>
+         </output>
+      </operation>
+      <operation name="getReportPeriods">
+         <soap:operation soapAction=""/>
+         <input>
+            <soap:body use="literal"/>
+         </input>
+         <output>
+            <soap:body use="literal"/>
+         </output>
+      </operation>
+      <operation name="getReportProducts">
+         <soap:operation soapAction=""/>
+         <input>
+            <soap:body use="literal"/>
+         </input>
+         <output>
+            <soap:body use="literal"/>
+         </output>
+      </operation>
+      <operation name="getRiskCapabilities">
+         <soap:operation soapAction=""/>
+         <input>
+            <soap:body use="literal"/>
+         </input>
+         <output>
+            <soap:body use="literal"/>
+         </output>
+      </operation>
+      <operation name="getRiskIntentions">
+         <soap:operation soapAction=""/>
+         <input>
+            <soap:body use="literal"/>
+         </input>
+         <output>
+            <soap:body use="literal"/>
+         </output>
+      </operation>
+      <operation name="getSensorTypes">
+         <soap:operation soapAction=""/>
+         <input>
+            <soap:body use="literal"/>
+         </input>
+         <output>
+            <soap:body use="literal"/>
+         </output>
+      </operation>
+      <operation name="getSensors">
+         <soap:operation soapAction=""/>
+         <input>
+            <soap:body use="literal"/>
+         </input>
+         <output>
+            <soap:body use="literal"/>
+         </output>
+      </operation>
+      <operation name="getStandingEEICodes">
+         <soap:operation soapAction=""/>
+         <input>
+            <soap:body use="literal"/>
+         </input>
+         <output>
+            <soap:body use="literal"/>
+         </output>
+      </operation>
+      <operation name="getStrategicInfluences">
+         <soap:operation soapAction=""/>
+         <input>
+            <soap:body use="literal"/>
+         </input>
+         <output>
+            <soap:body use="literal"/>
+         </output>
+      </operation>
+      <operation name="getSystemTime">
+         <soap:operation soapAction=""/>
+         <input>
+            <soap:body use="literal"/>
+         </input>
+         <output>
+            <soap:body use="literal"/>
+         </output>
+      </operation>
+      <operation name="getTheaters">
+         <soap:operation soapAction=""/>
+         <input>
+            <soap:body use="literal"/>
+         </input>
+         <output>
+            <soap:body use="literal"/>
+         </output>
+      </operation>
+      <operation name="getTracks">
+         <soap:operation soapAction=""/>
+         <input>
+            <soap:body use="literal"/>
+         </input>
+         <output>
+            <soap:body use="literal"/>
+         </output>
+      </operation>
+      <operation name="getInfoneedDerivedFrom">
+         <soap:operation soapAction=""/>
+         <input>
+            <soap:body use="literal"/>
+         </input>
+         <output>
+            <soap:body use="literal"/>
+         </output>
+      </operation>
+      <operation name="getNonSigintDiscipline">
+         <soap:operation soapAction=""/>
+         <input>
+            <soap:body use="literal"/>
+         </input>
+         <output>
+            <soap:body use="literal"/>
+         </output>
+      </operation>
+      <operation name="getNsrpClassifications">
+         <soap:operation soapAction=""/>
+         <input>
+            <soap:body use="literal"/>
+         </input>
+         <output>
+            <soap:body use="literal"/>
+         </output>
+      </operation>
+      <operation name="getParametricMeasNode">
+         <soap:operation soapAction=""/>
+         <input>
+            <soap:body use="literal"/>
+         </input>
+         <output>
+            <soap:body use="literal"/>
+         </output>
+      </operation>
+      <operation name="getPortionMarkings">
+         <soap:operation soapAction=""/>
+         <input>
+            <soap:body use="literal"/>
+         </input>
+         <output>
+            <soap:body use="literal"/>
+         </output>
+      </operation>
+      <operation name="getReportingCriteriaDeliveryMechanisms">
+         <soap:operation soapAction=""/>
+         <input>
+            <soap:body use="literal"/>
+         </input>
+         <output>
+            <soap:body use="literal"/>
+         </output>
+      </operation>
+      <operation name="getReportingCriteriaReportingTimeliness">
+         <soap:operation soapAction=""/>
+         <input>
+            <soap:body use="literal"/>
+         </input>
+         <output>
+            <soap:body use="literal"/>
+         </output>
+      </operation>
+      <operation name="getReportingCriteriaReportTypes">
+         <soap:operation soapAction=""/>
+         <input>
+            <soap:body use="literal"/>
+         </input>
+         <output>
+            <soap:body use="literal"/>
+         </output>
+      </operation>
+      <operation name="getSigintEeiWeaponSystemNames">
+         <soap:operation soapAction=""/>
+         <input>
+            <soap:body use="literal"/>
+         </input>
+         <output>
+            <soap:body use="literal"/>
+         </output>
+      </operation>
+      <operation name="getSigintEeiWeaponSystemTypes">
+         <soap:operation soapAction=""/>
+         <input>
+            <soap:body use="literal"/>
+         </input>
+         <output>
+            <soap:body use="literal"/>
+         </output>
+      </operation>
+      <operation name="getSoiFunctions">
+         <soap:operation soapAction=""/>
+         <input>
+            <soap:body use="literal"/>
+         </input>
+         <output>
+            <soap:body use="literal"/>
+         </output>
+      </operation>
+      <operation name="getSoiSignals">
+         <soap:operation soapAction=""/>
+         <input>
+            <soap:body use="literal"/>
+         </input>
+         <output>
+            <soap:body use="literal"/>
+         </output>
+      </operation>
+      <operation name="getSupportedElements">
+         <soap:operation soapAction=""/>
+         <input>
+            <soap:body use="literal"/>
+         </input>
+         <output>
+            <soap:body use="literal"/>
+         </output>
+      </operation>
+   </binding>
+   <service name="PRISMBaseDataWSv701">
+      <port name="PRISMBaseDataWSEndPointv701Port" binding="tns:PRISMBaseDataWSEndPointv701Binding">
+         <soap:address location="REPLACE_WITH_ACTUAL_URL"/>
+      </port>
+   </service>
+</definitions>

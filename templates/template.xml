@@ -1,0 +1,12 @@
+<soapenv:Envelope 
+  xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" 
+  xmlns:tem="{{ t_namespace }}">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:{{ operation }}>
+            {%- for i in dtypes %}
+            <tem:{{- i -}}>?</tem:{{- i -}}>
+            {%- endfor %}
+      </tem:{{ operation }}>
+   </soapenv:Body>
+</soapenv:Envelope>

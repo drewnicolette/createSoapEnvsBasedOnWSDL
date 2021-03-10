@@ -1,0 +1,94 @@
+<soapenv:Envelope 
+  xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" 
+  xmlns:tem="{{ t_namespace }}">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:{{ operation }}>
+         <tem:intA>1</tem:intA>
+         <tem:intB>2</tem:intB>
+      </tem:{{ operation }}>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+
+<soapenv:Envelope 
+  xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" 
+  xmlns:tem="{{ t_namespace }}">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:{{ operation }}>
+         {% for i in dtypes %}
+            <tem:{{ i }}>?</tem:{{ i }}>
+         {% endfor %}
+      </tem:{{ operation }}>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+
+<soapenv:Envelope 
+  xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" 
+  xmlns:tem="{{ t_namespace }}">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:{{ operation }}>
+         {% for i in dtypes -%}
+            <tem:{{ i }}>?</tem:{{ i }}> 
+         {% endfor %}
+      </tem:{{ operation }}>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+'''
+tree = ET.parse(full_path_to_wsdl)
+root = tree.getroot()
+target_namespace = getNamespace(tree,"xml_sample.wsdl")
+lst_of_operations = getOperations(tree)
+print(lst_of_operations)
+
+
+settings = Settings(strict=False, xml_huge_tree=True)
+client = Client(wsdl_url, settings=settings)
+
+node = client.create_message(client.service,"getAOIs","test")
+print(etree.tostring(node, pretty_print=True).decode())
+
+
+history = HistoryPlugin()
+client = Client(
+    'http://examples.python-zeep.org/basic.wsdl',
+    plugins=[history])
+client.service.DoSomething()
+
+print(history.last_sent)
+'''
+
+<soapenv:Envelope 
+  xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" 
+  xmlns:tem="{{ t_namespace }}">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:{{ operation }}>
+            {% for i in dtypes -%}
+            <tem:{{ i -}}>?</tem:{{ i -}}>
+            {% endfor %}
+      </tem:{{ operation }}>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+
+------
+
+Working Below!!!
+
+<soapenv:Envelope 
+  xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" 
+  xmlns:tem="{{ t_namespace }}">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:{{ operation }}>
+            {%- for i in dtypes %}
+            <tem:{{- i -}}>?</tem:{{- i -}}>
+            {%- endfor %}
+      </tem:{{ operation }}>
+   </soapenv:Body>
+</soapenv:Envelope>
